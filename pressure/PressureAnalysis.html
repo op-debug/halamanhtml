@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Pressure Analysis</h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+  <p><strong>Gas Expansion Equations<br /> <br /> </strong></p>
+<p>Basic gas laws :<br /> </p>
+<p><em>P<sub>1</sub></em> <em>V</em><em><sub>1</sub></em> <em>&divide;</em> <em>T</em><em><sub>1</sub></em><em> = </em><em>P</em><em><sub>2</sub></em> <em>V</em><em><sub>2 </sub></em><em>&divide;</em> <em>T<sub>2</sub><br /> <br /> </em></p>
+<p>Where ;</p>
+<p>P<sub>1</sub> = formation pressure (psi)<br /> P<sub>2</sub> = hydrostatic pressure at the surface or any depth in the wellbore (psi)</p>
+<p>V<sub>1</sub> = original pit gain (bbl)<br /> V<sub>2&nbsp; </sub>= gas volume at surface or at any depth of interest (bbl)</p>
+<p>T<sub>1</sub> = temperature of formation fluid, degrees Rankine (<sup>0</sup>R = &deg;F + 460)<br /> T<sub>2</sub> = temperature at surface or at any depth of interest, degrees Rankine<br /> </p>
+<p>Basic gas law plus compressibility factor<br /> </p>
+<p><em>P<sub>1</sub></em> <em>V<sub>1</sub></em> <em>&divide;</em> <em>T<sub>1</sub></em> <em>Z</em><em><sub>1 </sub></em><em>=</em> <em>P</em><em><sub>2 </sub></em><em>V<sub>2</sub></em><em> : </em><em>T<sub>2</sub></em> <em>Z<sub>2</sub><br /> <br /> </em></p>
+<p>Where Z<sub>1</sub> = compressibility factor under pressure in formation,dimensionless<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Z<sub>2</sub> = compressibility factor at the surface or at any depth of</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; interest, dimensionless<br /> </p>
+<p>Shortened gas expansion equation :</p>
+<p>&nbsp;</p>
+<p><em>P<sub>1</sub></em> <em>V</em><em><sub>1 </sub></em><em>=</em> <em>P<sub>2</sub></em><em> V</em><em><sub>2</sub></em><em><br /> <br /> </em></p>
+<p>&nbsp;</p>
+<p>Where ;</p>
+<p>P<sub>1</sub> = formation pressure (psi)<br /> P<sub>2</sub> = hydrostatic pressure plus atmospheric pressure (14.7 psi), psi<br /> V<sub>1</sub> = original pit gain (bbl)<br /> V<sub>2</sub> = gas volume at surface or at any depth of interest (bbl)</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Hydrostatic Pressure Exerted by Each Barrel of Mud </strong><strong>i</strong><strong>n the Casing<br /> <br /> </strong></p>
+<p>With pipe in the wellbore :<br /> </p>
+        <br/>
+        <img src="img/pa/for1.png">
+        <br/>
+        <p>Case : Dh &mdash; 9-5/8 in. casing &mdash; 43.5 lb/ft &nbsp; 
+        &nbsp;= <input type="text" id="for13" style="width:50px;text-align:right;" value="0"> in. ID<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Dp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for14" style="width:50px;text-align:right;" value="0"> in.
+        OD<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+        Mud weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for15" style="width:50px;text-align:right;" value="0"> ppg</p>
+                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung2">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil2"></div>
+		</h4>
+        <br/>
+        
+        </div>
+    </body>
+	
+	<script>
+
+	hitung1.onclick = function(){
+		document.getElementById('hasil1').innerHTML =(document.getElementById('for12').value*(document.getElementById('for13').value-document.getElementById('for14').value))/(document.getElementById('for14').value-document.getElementById('for11').value)+ ' bbl';
+	}
+	
+	hitung2.onclick = function(){
+		document.getElementById('hasil2').innerHTML =(document.getElementById('for22').value*(document.getElementById('for23').value-document.getElementById('for24').value))/(document.getElementById('for24').value-document.getElementById('for21').value)+ ' bbl';
+	}
+	</script>
+	
+	
+</html>

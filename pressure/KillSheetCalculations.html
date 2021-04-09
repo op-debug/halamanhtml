@@ -1,0 +1,163 @@
+Kill Sheet and Related Calculations<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Kill Sheet and Related Calculations</h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+  <p><strong>Normal Kill Sheet<br /> <br /> </strong></p>
+<p>Pre-recorded Data<br /> </p>
+<p>Original mud weight (0MW)..................................... ppg<br /> </p>
+<p>Measured depth (MD) .......................................... ft<br /> </p>
+<p>Kill rate pressure (KRP).............. psi @ ................. spm<br /> </p>
+<p>Kill rate pressure (KRP).............. psi @ ................. spm<br /> </p>
+<p><strong>Drill String Volume</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>Drill pipe capacity<br /> </p>
+<p>........... bbl/ft &nbsp;x ........... length (ft) = .............. bbl</p>
+<p>&nbsp;</p>
+<p>Drill pipe capacity<br /> </p>
+<p>........... bbl/ft &nbsp;x ........... length (ft) = .............. bbl<br /> </p>
+<p>Drill collar capacity<br /> </p>
+<p>........... bbl/ft &nbsp;x ........... length (ft) = .............. bbl<br /> </p>
+<p>Total drill string volume .................................... bbl<br /> </p>
+<p><strong>Annular Volume<br /> <br /> </strong></p>
+<p>Drill collar/open hole<br /> </p>
+<p>Capacity .......... bbl/ft x .......... length (ft) = .......... bbl<br /> </p>
+<p>Drill pipe/open hole <br /> </p>
+<p>Capacity .......... bbl/ft x .......... length (ft) = .......... bbl<br /> </p>
+<p>Drill pipe/casing<br /> </p>
+<p>Capacity .......... bbl/ft x .......... length (ft) = .......... bbl<br /> </p>
+<p>Total barrels in open hole ..................................... bbl<br /> </p>
+<p>Total annular volume ........................................... bbl<br /> </p>
+<p><strong>Pump Data<br /> <br /> </strong></p>
+<p>Pump output ................... bbl/stk @ ..................... % cfl&igrave;dency<br /> </p>
+<p><strong>Surface to bit strokes</strong> <strong>:<br /> <br /> </strong></p>
+<p>Drill string &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pump output<br /> vo1ume ............ bbl &divide; ....... bbl/stk &nbsp;&nbsp;&nbsp;&nbsp;= ............... stk<br /> </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Bit to casing shoe strokes</strong> <strong>:<br /> <br /> </strong></p>
+<p>Open hole&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;pump output<br /> volume ............ bbl &divide; ........ bbl/stk &nbsp;&nbsp;&nbsp;&nbsp;= .............. stk<br /> </p>
+<p>Bit to casing shoe strokes :<br /> </p>
+<p>Annulus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pump output<br /> volume ............ bbl &divide; ........ bbllstk &nbsp;&nbsp;&nbsp;&nbsp;= .............. stk<br /> </p>
+<p><strong>Maximum allo</strong><strong>w</strong><strong>able shut-in casing pressure</strong> <strong>:<br /> <br /> </strong></p>
+<p>Leak-off test ........... psi, using ............... ppg mud weight<br /> </p>
+<p>@ cising setting&nbsp; of ............................... TVD<br /> </p>
+<p><strong>Kick data<br /> <br /> </strong></p>
+<p>SIDPP .............................................. psi<br /> </p>
+<p>SICP ............................................... psi<br /> </p>
+<p>Pit gain ........................................... bbl<br /> </p>
+<p>True vertical depth ................................ ft<br /> </p>
+<p><strong>Calcul</strong><strong>a</strong><strong>tions<br /> <br /> </strong></p>
+<p>Kill Weight Mud (KWM)<br /> </p>
+<p>= SIDPP .......... psi &divide; 0.052 + TVD .......... ft + 0MW .......... ppg<br /> </p>
+<p><strong>Initial Circulating Pressure (ICP)<br /> <br /> </strong></p>
+<p>= SIDPP .......... psi + KRP .............. psi = ............. psi<br /> </p>
+<p>Final Circulating Pressure (FCP)</p>
+<p>&nbsp;</p>
+<p>= KWM ............ ppg x KRP .............. psi &divide; OMW ......... ppg<br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = ................ psi<br /> </p>
+<p><strong>Psi/stroke<br /> <br /> </strong></p>
+<p>ICP ............ psi &mdash; FCP ............. psi : strokes to bit ..........<br /> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;= ................. psi/stk</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Case ; Use the following data and fill out a kill sheet :<br /> </p>
+<p>Data : Original mud weight&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input type="text" id="for11" style="width:50px;text-align:right;" value="0"> ppg<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Measured depth&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = <input type="text" id="for12" style="width:50px;text-align:right;" value="0"> ft</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Kill rate pressure @ 50 spm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input type="text" id="for13" style="width:50px;text-align:right;" value="0"> psi<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Kill rate pressure @ 30 spm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input type="text" id="for14" style="width:50px;text-align:right;" value="0">psi<br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Drill string :<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; drill pipe 5.0 inch &mdash; <input type="text" id="for15" style="width:50px;text-align:right;" value="0"> lb/ft<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; capacity&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; = <input type="text" id="for16" style="width:50px;text-align:right;" value="0"> bbl/ft<br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HWDP <input type="text" id="for17" style="width:50px;text-align:right;" value="0"> inch - <input type="text" id="for18" style="width:50px;text-align:right;" value="0"> lb/ft<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; capacity&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; = <input type="text" id="for18" style="width:50px;text-align:right;" value="0"> bbl/ft<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+length&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= <input type="text" id="for19" style="width:50px;text-align:right;" value="0">
+ft<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; drill collars 8.0 inch OD &mdash; <input type="text" id="for110" style="width:50px;text-align:right;" value="0"> inch ID <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; capacity&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =<input type="text" id="for111" style="width:50px;text-align:right;" value="0"> bbl/ft<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; length&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= <input type="text" id="for112" style="width:50px;text-align:right;" value="0"> ft<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Annulus :<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+hole size&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= <input type="text" id="for113" style="width:50px;text-align:right;" value="0"> inch<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; drill collar/open hole capacity&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= <input type="text" id="for114" style="width:50px;text-align:right;" value="0"> bbl/ft<br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; drill pipe/open hole capacity&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= <input type="text" id="for115" style="width:50px;text-align:right;" value="0"> bbl/ft<br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; drill pipe/casing capacity&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = <input type="text" id="for116" style="width:50px;text-align:right;" value="0"> bbl/ft<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mud pump (7 inch x 12 inch triplex @ 95% eff) = <input type="text" id="for117" style="width:50px;text-align:right;" value="0"> bbl/stk<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Leak-off test with 9.0 ppg mud &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="text" id="for118" style="width:50px;text-align:right;" value="0"> psi<br /> 
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Casing setting depth&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= <input type="text" id="for119" style="width:50px;text-align:right;" value="0"> ft<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shut-in drill pipe pressure&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= <input type="text" id="for120" style="width:50px;text-align:right;" value="0">psi<br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Shut-in casing pressure&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= <input type="text" id="for121" style="width:50px;text-align:right;" value="0"> psi<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pit volume gain&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; = <input type="text" id="for122" style="width:50px;text-align:right;" value="0"> bbl<br /> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; True vertical depth&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= <input type="text" id="for123" style="width:50px;text-align:right;" value="0"> ft<br /> <br /> </p>      
+                        <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung1">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil1"></div>
+		</h4>
+        <br/>
+        
+        </div>
+    </body>
+	
+	<script>
+
+	hitung1.onclick = function(){
+		document.getElementById('hasil1').innerHTML =(document.getElementById('for12').value*(document.getElementById('for13').value-document.getElementById('for14').value))/(document.getElementById('for14').value-document.getElementById('for11').value)+ ' bbl';
+	}
+	
+	hitung2.onclick = function(){
+		document.getElementById('hasil2').innerHTML =(document.getElementById('for22').value*(document.getElementById('for23').value-document.getElementById('for24').value))/(document.getElementById('for24').value-document.getElementById('for21').value)+ ' bbl';
+	}
+	</script>
+	
+	
+</html>

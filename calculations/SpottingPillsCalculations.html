@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Spotting Pills Calculations</h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+        <p>Calculations Required for Spotting Pills<br /> </p>
+<p>The following will be determined :<br /> </p>
+<ol>
+<li>a. Barrels of spotting fluid (pill) required<br /> b. Pump strokes required to spot the pill<br /> </li>
+</ol>
+<p><strong>S</strong><strong>tep</strong> <strong>l<br /> <br /> </strong></p>
+<p>Determine the annular capacity (bbl/ft) for drill pipe and drill collars in the annulus: <br /> </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>St</strong><strong>e</strong><strong>p</strong><strong> 2</strong><strong><br /> <br /> </strong></p>
+<p>Determine the volume of pill required in the annulus :<br /> </p>
+<p><em>Vol</em><em>ume (</em><em>b</em><em>bl)</em><em> = annular cap.</em><em>(</em><em>bbl/f</em><em>t)</em><em> x section</em> <em>length</em><em> (</em><em>ft</em><em>)</em><em> x washout factor</em></p>
+<p>&nbsp;</p>
+<p><br /> <strong>Step 3<br /> <br /> </strong></p>
+<p>Determine total volume (bbl) of spotting fluid (pill) required :<br /> </p>
+<p>Barrels = Barrels required in annulus plus barrels to be left in drill</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string<br /> </p>
+<p><strong>Step 4<br /> <br /> </strong></p>
+<p>Determine drill string capacity (bbl):<br /> </p>
+<p><em>Barrels = drill pipe/drill collar capacity</em><em> (</em><em>bbl</em><em>/</em><em>ft</em><em>)</em><em> x length</em><em> (</em><em>f</em><em>t)</em><em><br /> <br /> </em></p>
+<p><strong>Step</strong><strong> 5</strong><strong><br /> <br /> </strong></p>
+<p>Determine strokes required to pump pill :<br /> </p>
+<p><em>Strokes = vol or pill</em><em> (</em><em>bbl</em><em>)</em><em> &divide; pump output</em><em> (</em><em>bb</em><em>l/</em><em>stk</em><em>)</em><em><br /> <br /> </em></p>
+<p><strong>Step</strong><strong> 6</strong><strong><br /> <br /> </strong></p>
+<p>Determine number of barrels required to chase pill :<br /> </p>
+<p><em>Barrels = drill string vol </em><em>(bbl) &ndash; vol </em><em>left in drill </em><em>s</em><em>tring</em><em> (bbl)</em><em><br /> <br /> </em></p>
+<p><strong>Step</strong> <strong>7<br /> <br /> </strong></p>
+<p>Determine strokes required to chase pill :</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Step </strong><strong>8</strong><strong><br /> <br /> </strong></p>
+<p>Total strokes required to spot the pill :<br /> </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Sample Case : Drill collars are differentially stuck. Use the following</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data to spot an oil based pill around the drill collars plus</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 200 ft (optional) above the collars. Leave 24 bbl in the</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; drill string :</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Data : Well depth &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 10,000 ft<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hole diameter &nbsp;&nbsp;&nbsp;= 8-1/2 inch<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Washout factor &nbsp;&nbsp;= 20%<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Drill pipe &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 5.0 inch &mdash; 19.5 lb/ft<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Capacity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 0.01776 bbl/ft<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Length &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 9400 ft<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Drill collars &nbsp;&nbsp;&nbsp;= 6-1/2 inch OD x 2-1/2 inch ID<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Capacity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 0.0061 bbl/ft<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Length &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 600 ft<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pump output &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= 0.117 bbl/stk<br /> </p>
+<p>Strokes required to displace surface system from suction tank to the drill pipe = 80 stk<br /> </p>
+        </div>
+    </body>
+	
+	<script>
+
+	hitung1.onclick = function(){
+		if (!isNaN(document.getElementById('for11').value/document.getElementById('for12').value)) {
+			document.getElementById('hasil1').innerHTML = Math.round(document.getElementById('for11').value/document.getElementById('for12').value) + ' ft/min';
+		}
+		else{
+			document.getElementById('hasil1').innerHTML = '0 ft/min';
+		}
+	}
+
+	hitung2.onclick = function(){
+			document.getElementById('hasil2').innerHTML = Math.round((24.5 * document.getElementById('for21').value)/((document.getElementById('for22').value*document.getElementById('for22').value) - (document.getElementById('for23').value*document.getElementById('for23').value))) + ' ft/min';
+	}
+	hitung3.onclick = function(){
+			document.getElementById('hasil3').innerHTML = (1029.4 * document.getElementById('for31').value)/((document.getElementById('for32').value*document.getElementById('for32').value) - (document.getElementById('for33').value*document.getElementById('for33').value)) + ' ft/min';
+	}
+	hitung4.onclick = function(){
+			document.getElementById('hasil4').innerHTML = (17.16 * document.getElementById('for41').value)/((document.getElementById('for42').value*document.getElementById('for42').value) - (document.getElementById('for43').value*document.getElementById('for43').value)) + ' ft/sec';
+	}
+	hitung5.onclick = function(){
+			document.getElementById('hasil5').innerHTML = (((document.getElementById('for51').value)*((document.getElementById('for52').value*document.getElementById('for52').value)-(document.getElementById('for53').value*document.getElementById('for53').value)))/24.5) + ' gpm';
+	}
+	hitung6.onclick = function(){
+			document.getElementById('hasil6').innerHTML =  (((document.getElementById('for61').value)*(document.getElementById('for62').value))/0.136) ;
+	}
+	</script>
+	
+	
+</html>

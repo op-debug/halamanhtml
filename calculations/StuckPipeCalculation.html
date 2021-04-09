@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Stuck Pipe Calculation</h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+        
+<p><strong>Determine the feet of free pipe and the free point constant<br /> <br /> </strong></p>
+<p><strong>Method 1<br /> <br /> </strong></p>
+<p>The depth at which the pipe is stuck and the number of feet of free pipe can be estimated by the drill pipe stretch table below and the following formula.<br /> </p>
+<p><strong>Drill Pipe Stretch Table</strong><strong><br /> <br /> </strong></p>
+<table>
+<tbody>
+<tr>
+<td width="95">
+<p><strong>ID inch</strong></p>
+</td>
+<td width="103">
+<p><strong>Nominal Weight (lb/ft)</strong></p>
+</td>
+<td width="103">
+<p><strong>ID inch</strong></p>
+</td>
+<td width="103">
+<p><strong>Wall Area (sq. in)</strong></p>
+</td>
+<td width="103">
+<p><strong>Stretch Constant in/1000 lb</strong></p>
+<p><strong>/1000 ft</strong></p>
+</td>
+<td width="103">
+<p><strong>Free Point Constant</strong></p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>2-3/8</p>
+</td>
+<td width="103">
+<p>4.85</p>
+</td>
+<td width="103">
+<p>1.995</p>
+</td>
+<td width="103">
+<p>1.304</p>
+</td>
+<td width="103">
+<p>0.30675</p>
+</td>
+<td width="103">
+<p>3260.0</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>&nbsp;</p>
+</td>
+<td width="103">
+<p>6.65</p>
+</td>
+<td width="103">
+<p>1.815</p>
+</td>
+<td width="103">
+<p>1.843</p>
+</td>
+<td width="103">
+<p>0.21704</p>
+</td>
+<td width="103">
+<p>4607.7</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>2-7/8</p>
+</td>
+<td width="103">
+<p>6.85</p>
+</td>
+<td width="103">
+<p>2.241</p>
+</td>
+<td width="103">
+<p>1.812</p>
+</td>
+<td width="103">
+<p>0.22075</p>
+</td>
+<td width="103">
+<p>4530.0</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>&nbsp;</p>
+</td>
+<td width="103">
+<p>10.40</p>
+</td>
+<td width="103">
+<p>2.151</p>
+</td>
+<td width="103">
+<p>2.858</p>
+</td>
+<td width="103">
+<p>0.13996</p>
+</td>
+<td width="103">
+<p>7145.0</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>3-1/2</p>
+</td>
+<td width="103">
+<p>9.50</p>
+</td>
+<td width="103">
+<p>2.995</p>
+</td>
+<td width="103">
+<p>2.590</p>
+</td>
+<td width="103">
+<p>0.15444</p>
+</td>
+<td width="103">
+<p>6475.0</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>&nbsp;</p>
+</td>
+<td width="103">
+<p>13.30</p>
+</td>
+<td width="103">
+<p>2.764</p>
+</td>
+<td width="103">
+<p>3.621</p>
+</td>
+<td width="103">
+<p>0.11047</p>
+</td>
+<td width="103">
+<p>9052.5</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>&nbsp;</p>
+</td>
+<td width="103">
+<p>15.50</p>
+</td>
+<td width="103">
+<p>2.602</p>
+</td>
+<td width="103">
+<p>4.304</p>
+</td>
+<td width="103">
+<p>0.09294</p>
+</td>
+<td width="103">
+<p>10760.0</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>4.0</p>
+</td>
+<td width="103">
+<p>11.85</p>
+</td>
+<td width="103">
+<p>3.476</p>
+</td>
+<td width="103">
+<p>3.077</p>
+</td>
+<td width="103">
+<p>0.13000</p>
+</td>
+<td width="103">
+<p>7692.5</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>&nbsp;</p>
+</td>
+<td width="103">
+<p>14.00</p>
+</td>
+<td width="103">
+<p>3.340</p>
+</td>
+<td width="103">
+<p>3.805</p>
+</td>
+<td width="103">
+<p>0.10512</p>
+</td>
+<td width="103">
+<p>9512.5</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>4-1/2</p>
+</td>
+<td width="103">
+<p>13.75</p>
+</td>
+<td width="103">
+<p>3.958</p>
+</td>
+<td width="103">
+<p>3.600</p>
+</td>
+<td width="103">
+<p>0.11111</p>
+</td>
+<td width="103">
+<p>9000.0</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>&nbsp;</p>
+</td>
+<td width="103">
+<p>16.60</p>
+</td>
+<td width="103">
+<p>3.826</p>
+</td>
+<td width="103">
+<p>4.407</p>
+</td>
+<td width="103">
+<p>0.09076</p>
+</td>
+<td width="103">
+<p>1017.5</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>&nbsp;</p>
+</td>
+<td width="103">
+<p>18.10</p>
+</td>
+<td width="103">
+<p>3.754</p>
+</td>
+<td width="103">
+<p>4.836</p>
+</td>
+<td width="103">
+<p>0.08271</p>
+</td>
+<td width="103">
+<p>12090.0</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>&nbsp;</p>
+</td>
+<td width="103">
+<p>20.00</p>
+</td>
+<td width="103">
+<p>3.640</p>
+</td>
+<td width="103">
+<p>5.498</p>
+</td>
+<td width="103">
+<p>0.07275</p>
+</td>
+<td width="103">
+<p>13745.0</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>5.0</p>
+</td>
+<td width="103">
+<p>16.25</p>
+</td>
+<td width="103">
+<p>4.408</p>
+</td>
+<td width="103">
+<p>4.374</p>
+</td>
+<td width="103">
+<p>0.09145</p>
+</td>
+<td width="103">
+<p>10935.0</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>&nbsp;</p>
+</td>
+<td width="103">
+<p>19.50</p>
+</td>
+<td width="103">
+<p>4.276</p>
+</td>
+<td width="103">
+<p>5.275</p>
+</td>
+<td width="103">
+<p>0.07583</p>
+</td>
+<td width="103">
+<p>13187.5</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>5-1/2</p>
+</td>
+<td width="103">
+<p>21.90</p>
+</td>
+<td width="103">
+<p>4.778</p>
+</td>
+<td width="103">
+<p>5.828</p>
+</td>
+<td width="103">
+<p>0.06863</p>
+</td>
+<td width="103">
+<p>14570.0</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>&nbsp;</p>
+</td>
+<td width="103">
+<p>24.70</p>
+</td>
+<td width="103">
+<p>4.670</p>
+</td>
+<td width="103">
+<p>6.630</p>
+</td>
+<td width="103">
+<p>0.06033</p>
+</td>
+<td width="103">
+<p>16575.0</p>
+</td>
+</tr>
+<tr>
+<td width="95">
+<p>6-5/8</p>
+</td>
+<td width="103">
+<p>25.20</p>
+</td>
+<td width="103">
+<p>5.965</p>
+</td>
+<td width="103">
+<p>6.526</p>
+</td>
+<td width="103">
+<p>0.06129</p>
+</td>
+<td width="103">
+<p>16315.0</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Sample Case : 3-1/2 inch- 13.30 lb/ft drill pipe<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20 inch of stretch with 35,000 lb of pull force<br /> </p>
+<p>From drill pipe stretch table :<br /> </p>
+<p>Free point constant = 9052.5 for 3-1/2 inch drill pipe 13.30 lb/ft<br /> </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>D</strong><strong>etermine free point constant (FPC)<br /> <br /> </strong></p>
+<p>The free point constant can be determined for any type of steel drill pipe<br /> </p>
+<p>the outside diameter (inch) and inside diameter (inch) are known :<br /> </p>
+        </div>
+    </body>
+	
+	<script>
+
+	hitung1.onclick = function(){
+		if (!isNaN(document.getElementById('for11').value/document.getElementById('for12').value)) {
+			document.getElementById('hasil1').innerHTML = Math.round(document.getElementById('for11').value/document.getElementById('for12').value) + ' ft/min';
+		}
+		else{
+			document.getElementById('hasil1').innerHTML = '0 ft/min';
+		}
+	}
+
+	hitung2.onclick = function(){
+			document.getElementById('hasil2').innerHTML = Math.round((24.5 * document.getElementById('for21').value)/((document.getElementById('for22').value*document.getElementById('for22').value) - (document.getElementById('for23').value*document.getElementById('for23').value))) + ' ft/min';
+	}
+	hitung3.onclick = function(){
+			document.getElementById('hasil3').innerHTML = (1029.4 * document.getElementById('for31').value)/((document.getElementById('for32').value*document.getElementById('for32').value) - (document.getElementById('for33').value*document.getElementById('for33').value)) + ' ft/min';
+	}
+	hitung4.onclick = function(){
+			document.getElementById('hasil4').innerHTML = (17.16 * document.getElementById('for41').value)/((document.getElementById('for42').value*document.getElementById('for42').value) - (document.getElementById('for43').value*document.getElementById('for43').value)) + ' ft/sec';
+	}
+	hitung5.onclick = function(){
+			document.getElementById('hasil5').innerHTML = (((document.getElementById('for51').value)*((document.getElementById('for52').value*document.getElementById('for52').value)-(document.getElementById('for53').value*document.getElementById('for53').value)))/24.5) + ' gpm';
+	}
+	hitung6.onclick = function(){
+			document.getElementById('hasil6').innerHTML =  (((document.getElementById('for61').value)*(document.getElementById('for62').value))/0.136) ;
+	}
+	</script>
+	
+	
+</html>

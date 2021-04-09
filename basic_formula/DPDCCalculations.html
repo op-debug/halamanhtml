@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/BuoyancyFactor.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Drill Pipe / Dril Collar Calculations </h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+<p><span data-ccp-props="{}">&nbsp;</span></p>
+<p><span data-contrast="auto">Capacities</span><span data-contrast="auto">&nbsp;(</span><span data-contrast="auto">bbl</span><span data-contrast="auto">/</span><span data-contrast="auto">ft</span><span data-contrast="auto">),&nbsp;</span><span data-contrast="auto">displace</span><span data-contrast="auto">m</span><span data-contrast="auto">ent</span><span data-contrast="auto">&nbsp;(</span><span data-contrast="auto">bb</span><span data-contrast="auto">l/ft)</span><span data-contrast="auto">, and&nbsp;</span><span data-contrast="auto">weig</span><span data-contrast="auto">ht (lb/ft) can be</span></p>
+<p><span data-contrast="auto"> calculated&nbsp;</span><span data-contrast="auto">from the following formulas</span><span data-contrast="auto">&nbsp;</span><span data-contrast="auto">:</span></p>
+<p>&nbsp;</p>
+<img src="img/dpd/formula1.png">
+<p>&nbsp;</p>
+<p><span data-contrast="auto">Case :</span><span data-contrast="auto">&nbsp;Determine the capacity</span><span data-contrast="auto">&nbsp;(</span><span data-contrast="auto">bbl</span><span data-contrast="auto">/</span><span data-contrast="auto">ft</span><span data-contrast="auto">),&nbsp;</span><span data-contrast="auto">displacement</span><span data-contrast="auto">&nbsp;(</span><span data-contrast="auto">bb</span><span data-contrast="auto">l/</span><span data-contrast="auto">f</span><span data-contrast="auto">t)</span><span data-contrast="auto">, and</span><span data-contrast="auto">&nbsp;&nbsp;&nbsp;</span><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+<p><span data-contrast="auto">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span data-contrast="auto">Weight</span><span data-contrast="auto">&nbsp;(lb/</span><span data-contrast="auto">ft</span><span data-contrast="auto">)</span><span data-contrast="auto">&nbsp;for the following</span><span data-contrast="auto">&nbsp;</span><span data-contrast="auto">:</span>&nbsp;<br /><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+<p><span data-contrast="auto">Drill collar OD = <input type="" id="for11" style="width:50px;text-align:right;" value="0"> inch<br /><br /><span data-contrast="auto">Drill collar ID&nbsp;&nbsp;
+</span><span data-contrast="auto">=&nbsp;</span><span data-contrast="auto"><input type="" id="for12" style="width:50px;text-align:right;" value="0"> in</span><span data-contrast="auto">ch</span>&nbsp;<br /><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+<p><span data-contrast="auto">Convert 13/16 to decimal equivalent :<br/> 13 : 16 = 0.8125</span>&nbsp;<br /><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+
+                <br/>
+                <button class="btn btn-success" id="hitung1">Calculate</button> 
+        </p>
+
+		<h4>
+		<div id="hasil1"></div>
+		</h4>
+		
+		
+		<br />
+		<p><strong><span class="TextRun SCXW135188962 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">Weight</span></span><span class="TextRun SCXW135188962 BCX0" lang="ID-ID" xml:lang="ID-ID" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">&nbsp;(</span></span><span class="TextRun SCXW135188962 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"><span class="NormalTextRun SpellingErrorV2 SCXW135188962 BCX0">lb</span></span><span class="TextRun SCXW135188962 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">/</span></span><span class="TextRun SCXW135188962 BCX0" lang="ID-ID" xml:lang="ID-ID" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">f</span></span><span class="TextRun SCXW135188962 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">t</span></span><span class="TextRun SCXW135188962 BCX0" lang="ID-ID" xml:lang="ID-ID" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">)</span></span><span class="TextRun SCXW135188962 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">&nbsp;for REGULAR DR</span></span><span class="TextRun SCXW135188962 BCX0" lang="ID-ID" xml:lang="ID-ID" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">I</span></span><span class="TextRun SCXW135188962 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">LL COLLARS can be</span></span><span class="TextRun SCXW135188962 BCX0" lang="ID-ID" xml:lang="ID-ID" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">&nbsp;</span></span><span class="TextRun SCXW135188962 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"><span class="NormalTextRun SpellingErrorV2 SCXW135188962 BCX0">approxi</span></span><span class="TextRun SCXW135188962 BCX0" lang="ID-ID" xml:lang="ID-ID" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">ma</span></span><span class="TextRun SCXW135188962 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">ted&nbsp;</span></span><span class="TextRun SCXW135188962 BCX0" lang="ID-ID" xml:lang="ID-ID" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">by&nbsp;</span></span><span class="TextRun SCXW135188962 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">the</span></span><span class="TextRun SCXW135188962 BCX0" lang="ID-ID" xml:lang="ID-ID" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">&nbsp;</span></span><span class="TextRun SCXW135188962 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">following formula</span></span><span class="TextRun SCXW135188962 BCX0" lang="ID-ID" xml:lang="ID-ID" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">&nbsp;</span></span><span class="TextRun SCXW135188962 BCX0" lang="EN-US" xml:lang="EN-US" data-contrast="auto"><span class="NormalTextRun SCXW135188962 BCX0">:</span></span></strong></p>
+		<p>&nbsp;</p>
+		<img src="img/dpd/formula2.png">
+		<p>&nbsp;</p>
+		<p><span data-contrast="auto">Case&nbsp;</span><span data-contrast="auto">: Regular drill collars</span>&nbsp;<br /><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		<p><span data-contrast="auto">Drill collar OD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <input type="" id="for21" style="width:50px;text-align:right;" value="0"> inch</span>&nbsp;<br /><br />
+		<span data-contrast="auto">Drill collar ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;= <input type="" id="for22" style="width:50px;text-align:right;" value="0"> inch</span>&nbsp;<br /><br />
+		<span data-contrast="auto">Decimal equivalent = <input type="" id="for23" style="width:50px;text-align:right;" value="0"> in</span><span data-contrast="auto">ch</span></p>
+
+                <br/>
+                <button class="btn btn-success" id="hitung2">Calculate</button> 
+        </p>
+
+		<h4>
+		<div id="hasil2"></div>
+		</h4>		
+		
+		<br/>
+		<p><strong><span data-contrast="auto">Weight</span></strong><strong><span data-contrast="auto">&nbsp;(</span></strong><strong><span data-contrast="auto">lb</span></strong><strong><span data-contrast="auto">/</span></strong><strong><span data-contrast="auto">f</span></strong><strong><span data-contrast="auto">t</span></strong><strong><span data-contrast="auto">)</span></strong><strong><span data-contrast="auto">&nbsp;for SPIRAL DRILL COLLARS can be approximated by the</span></strong><strong><span data-contrast="auto">&nbsp;f</span></strong><strong><span data-contrast="auto">ollowing</span></strong><strong><span data-contrast="auto">&nbsp;formula</span></strong><strong><span data-contrast="auto">&nbsp;:</span></strong><strong><span data-contrast="auto">&nbsp;</span></strong>&nbsp;<br /><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		<p>&nbsp;</p>
+		<img src="img/dpd/formula3.png">
+		<p>&nbsp;</p>
+		<p><span data-contrast="auto">Case&nbsp;</span><span data-contrast="auto">: Spiral drill collars</span>&nbsp;<br /><span data-ccp-props="{&quot;469777462&quot;:[916,1832,2748,3664,4580,5496,6412,7328,8244,9160,10076,10992,11908,12824,13740,14656],&quot;469777927&quot;:[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],&quot;469777928&quot;:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}">&nbsp;</span></p>
+		<p><span data-contrast="auto">Drill collar OD&nbsp;</span>
+		<span data-contrast="auto">;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><span data-contrast="auto">=&nbsp;</span><span data-contrast="auto"><input type="" id="for31" style="width:50px;text-align:right;" value="0"> inch</span>&nbsp;<br /><br />
+		<span data-contrast="auto">Drill collar ID&nbsp;</span><span data-contrast="auto">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+		</span><span data-contrast="auto">= <input type="" id="for32" style="width:50px;text-align:right;" value="0"> inch</span>&nbsp;<br /><br /><span data-contrast="auto">
+		Decimal equivalent&nbsp; &nbsp;&nbsp;&nbsp;= <input type="" id="for33" style="width:50px;text-align:right;" value="0"> inch</span></p>
+                <br/>
+                <button class="btn btn-success" id="hitung3">Calculate</button> 
+        </p>
+
+		<h4>
+		<div id="hasil3"></div>
+		</h4>		
+				
+		
+        </div>
+    </body>
+	
+	<script>
+
+	hitung1.onclick = function(){
+		document.getElementById('hasil1').innerHTML = (65.5-document.getElementById('for11').value)/65.5 ;
+	}
+		
+
+	hitung2.onclick = function(){
+		document.getElementById('hasil2').innerHTML = (489-document.getElementById('for21').value)/489 ;
+	}	
+  hitung3.onclick = function(){
+		document.getElementById('hasil3').innerHTML = ((document.getElementById('for31').value*document.getElementById('for31').value)-(document.getElementById('for32').value*document.getElementById('for32').value))*document.getElementById('for33').value ;
+	}	</script>
+	
+	
+</html>

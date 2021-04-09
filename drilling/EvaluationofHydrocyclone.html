@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Evaluation of Hydrocyclone </h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+        
+        </div>
+    </body>
+	
+	<script>
+
+	hitung1.onclick = function(){
+		if (!isNaN(document.getElementById('for11').value/document.getElementById('for12').value)) {
+			document.getElementById('hasil1').innerHTML = Math.round(document.getElementById('for11').value/document.getElementById('for12').value) + ' ft/min';
+		}
+		else{
+			document.getElementById('hasil1').innerHTML = '0 ft/min';
+		}
+	}
+
+	hitung2.onclick = function(){
+			document.getElementById('hasil2').innerHTML = Math.round((24.5 * document.getElementById('for21').value)/((document.getElementById('for22').value*document.getElementById('for22').value) - (document.getElementById('for23').value*document.getElementById('for23').value))) + ' ft/min';
+	}
+	hitung3.onclick = function(){
+			document.getElementById('hasil3').innerHTML = (1029.4 * document.getElementById('for31').value)/((document.getElementById('for32').value*document.getElementById('for32').value) - (document.getElementById('for33').value*document.getElementById('for33').value)) + ' ft/min';
+	}
+	hitung4.onclick = function(){
+			document.getElementById('hasil4').innerHTML = (17.16 * document.getElementById('for41').value)/((document.getElementById('for42').value*document.getElementById('for42').value) - (document.getElementById('for43').value*document.getElementById('for43').value)) + ' ft/sec';
+	}
+	hitung5.onclick = function(){
+			document.getElementById('hasil5').innerHTML = (((document.getElementById('for51').value)*((document.getElementById('for52').value*document.getElementById('for52').value)-(document.getElementById('for53').value*document.getElementById('for53').value)))/24.5) + ' gpm';
+	}
+	hitung6.onclick = function(){
+			document.getElementById('hasil6').innerHTML =  (((document.getElementById('for61').value)*(document.getElementById('for62').value))/0.136) ;
+	}
+	</script>
+	
+	
+</html>

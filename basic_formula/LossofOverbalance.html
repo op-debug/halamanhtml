@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/BuoyancyFactor.css">
+        <link rel="stylesheet" href="../../css/style.css"> <!-- Resource style -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<title>Tally App</title>
+    </head>
+    <body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <h1> Lose Overbalance</h1>
+			</div>
+		  </div>
+		</nav>
+		
+        <div style="left: 20px;position: absolute;top:100px">
+        <p><strong>Loss of Overbalance </strong><strong>Due to Falling Mud Leve</strong><strong>l</strong><strong><br /> Feet of pipe pulled DRY to lo</strong><strong>s</strong><strong>e Overbalance</strong></p>
+        <p><strong><br /> <br /> </strong></p>    
+		
+		<img src="img/lo/for1.png">
+ 
+		<br/><br/>
+ <p>Case : Determine the FEET of DRY pipe that must be pulled to lose</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The overbalance using the following data :</p>
+<p>&nbsp;</p>
+<p>Amount of overbalance = 150 psi<br /> Casing capacity &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; = <input type="" id="for11" style="width:50px;text-align:right;" value="0"> bbl/ft<br /><br />
+Pipe displacement &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input type="" id="for12" style="width:50px;text-align:right;" value="0"> bbl/ft<br /><br />
+Mud weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input type="" id="for12" style="width:50px;text-align:right;" value="0"> ppg</p>                <br/>
+                <br/>
+                <button class="btn btn-success" id="hitung1">Calculate</button> 
+
+        <br/>
+		<h4>
+		<div id="hasil1"></div>
+		</h4>
+        <br/>
+        <br/>
+		<p><strong>Feet of pipe pulled WET to Lose Overbalance<br /> <br /> </strong></p>
+		<br/>
+		<br/>
+		<img src="img/lo/for2.png">
+        <p><strong>&nbsp;</strong></p>
+<p>Case : Determine the feet of WET pipe that must be pulled to lose</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The overbalance using the following data :<br /> </p>
+<p>Amount of overbalance = <input type="" id="for21" style="width:50px;text-align:right;" value="0"> psi<br /> 
+Casing capacity &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; = <input type="" id="for22" style="width:50px;text-align:right;" value="0"> bbl/ft<br /><br />
+ Pipe capacity &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; = <input type="" id="for23" style="width:50px;text-align:right;" value="0"> bbl/ft<br /><br />
+ Pipe displacement &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input type="" id="for24" style="width:50px;text-align:right;" value="0"> bbl/ft<br /><br />
+ Mud weight &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = <input type="" id="for25" style="width:50px;text-align:right;" value="0"> ppg<br /> </p>
+                <br/>
+                <button class="btn btn-success" id="hitung2">Calculate</button> 
+        <br/>
+		<h4>
+		<div id="hasil2"></div>
+		</h4>
+        <br/>
+        <br/>
+        </div>
+    </body>
+	
+	<script>
+
+	hitung1.onclick = function(){
+		document.getElementById('hasil1').innerHTML = (65.5-document.getElementById('for11').value)/65.5 ;
+	}
+		
+
+	hitung2.onclick = function(){
+		document.getElementById('hasil2').innerHTML = (489-document.getElementById('for21').value)/489 ;
+	}	</script>
+	
+	
+</html>
